@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Hi Kunjeeee ❤️</title>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        background: url('https://i.ibb.co/7JfqXxB/night-sky-stars.jpg') no-repeat center center fixed;
+        background-size: cover;
+        font-family: 'Poppins', sans-serif;
+        color: white;
+        text-align: center;
+        overflow-x: hidden;
+    }
+
+    .screen {
+        display: none;
+        padding: 40px;
+        animation: fadeIn 1s ease forwards;
+    }
+
+    @keyframes fadeIn {
+        from {opacity: 0;}
+        to {opacity: 1;}
+    }
+
+    .active {
+        display: block;
+    }
+
+    .btn {
+        padding: 15px 28px;
+        background: #ff6aa2;
+        border: none;
+        border-radius: 10px;
+        margin: 10px;
+        color: white;
+        font-size: 18px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    .btn:hover {
+        background: #ff3f87;
+        transform: scale(1.05);
+    }
+
+    #heartRain span {
+        position: fixed;
+        top: -10px;
+        color: pink;
+        animation: fall 4s linear infinite;
+        font-size: 25px;
+    }
+
+    @keyframes fall {
+        to {
+            transform: translateY(100vh);
+            opacity: 0;
+        }
+    }
+</style>
+</head>
+<body>
+
+<div id="heartRain"></div>
+
+<script>
+function createHearts() {
+    for(let i=0;i<20;i++){
+        let heart = document.createElement("span");
+        heart.innerHTML = "💗";
+        heart.style.left = Math.random()*100 + "vw";
+        heart.style.animationDuration = (2+Math.random()*3)+"s";
+        document.getElementById("heartRain").appendChild(heart);
+    }
+}
+setInterval(createHearts, 800);
+</script>
+
+<!-- SCREEN 1 -->
+<div class="screen active" id="s1">
+    <h1>Hi Kunjeeee ❤️</h1>
+    <h2>When was us officially in a relationship?</h2>
+    <button class="btn" onclick="wrong1()">27/08/25</button>
+    <button class="btn" onclick="wrong1()">06/02/2004</button>
+    <button class="btn" onclick="wrong1()">27/09/25</button>
+    <p id="ans1"></p>
+    <button class="btn" onclick="next('s1','s2')">Next ➜</button>
+</div>
+
+<script>
+function wrong1(){
+    document.getElementById("ans1").innerHTML =
+    "nee jenithatheee nik vendi aahnu (06/02/2004) ....🌝🌷";
+}
+</script>
+
+<!-- SCREEN 2 -->
+<div class="screen" id="s2">
+    <h2>What did you felt the moment u saw me?</h2>
+    <button class="btn" onclick="ans2()">Love</button>
+    <button class="btn" onclick="ans2()">puchamm</button>
+    <button class="btn" onclick="ans2()">ethaa ee shalyam</button>
+    <p id="out2"></p>
+    <button class="btn" onclick="next('s2','s3')">Next ➜</button>
+</div>
+
+<script>
+function ans2(){
+    document.getElementById("out2").innerHTML =
+    "ohh woww Im happy that u loved me the moment u saw me ..ummaaa🌝😚";
+}
+</script>
+
+<!-- SCREEN 3 -->
+<div class="screen" id="s3">
+    <h2>Who in the world Loves you more?</h2>
+    <button class="btn" onclick="wrong3()">Parents</button>
+    <button class="btn" onclick="wrong3()">Friends</button>
+    <button class="btn" onclick="right3()">Anthuuu</button>
+    <p id="ans3"></p>
+    <button class="btn" onclick="next('s3','s4')">Next ➜</button>
+</div>
+
+<script>
+function wrong3(){
+    document.getElementById("ans3").innerHTML =
+    "Sorry anthu said he loves you more... A bit possessive 🙂‍↔️";
+}
+function right3(){
+    document.getElementById("ans3").innerHTML =
+    "not only in this world But in the whole universe and Whole Anthuuuuu loves you Moreeee ❤️";
+}
+</script>
+
+<!-- SCREEN 4 -->
+<div class="screen" id="s4">
+    <h2>What makes me the most happiest person?</h2>
+    <button class="btn" onclick="show4()">You</button>
+    <p id="ans4"></p>
+    <button class="btn" onclick="next('s4','s5')">Next ➜</button>
+</div>
+
+<script>
+function show4(){
+    document.getElementById("ans4").innerHTML =
+    "You matter to me most ponneee 🥹..You are my only priority ❤️";
+}
+</script>
+
+<!-- SCREEN 5 -->
+<div class="screen" id="s5">
+    <h2>This is an important question in our life, Think and Respond</h2>
+    <p>Valland angg aaloikkallee... Answer simple alleee</p>
+    <h2>Will you be my Valentine Ponnee? 💝</h2>
+
+    <button class="btn" onclick="yesVal()">Yes</button>
+    <button class="btn" onclick="noVal()">No</button>
+
+    <p id="valAns"></p>
+    <button class="btn" onclick="next('s5','s6')">Next ➜</button>
+</div>
+
+<script>
+function yesVal(){
+    document.getElementById("valAns").innerHTML =
+    "The best decision of your life, a chance for me to Love you and I'm Being Loved by this Princess🥹🥹🥹🌷. I love you.";
+}
+function noVal(){
+    document.getElementById("valAns").innerHTML =
+    "pattathilllaaaaa pattathillaaa you are already made for each other ❤️";
+}
+</script>
+
+<!-- SCREEN 6 (FINAL) -->
+<div class="screen" id="s6">
+    <h2 style="line-height:1.7;">
+        I, Alin Asokan whom you have met on a day when it was full crowded,<br><br>
+        Who was shattered into peices by heart then,  
+        Still Who chose to Love you the moment when I went deep into your smile,<br><br>
+
+        I'm confessing myself of loving you till eternity,  
+        Holding your sorrows as Ours,  
+        Laughing out your happiness as Ours,  
+        All your struggles as Ours,  
+        and being there for you even in rainy and sunny days,  
+        Stormy and calm days,  
+        Winter and Summer times,  
+        Plucking and watering flowers on Spring. <br><br>
+
+        I Promise on my life and death That I'll keep you the most happiest lady ever lived in this Universe.<br><br>
+
+        The moment when you weren't here I start missing you that I miss a part myself that has blended into the connection of us,  
+        I'll save, Secure and promise to keep this love of mine for you even After my death.<br><br>
+
+        All I need is You.  
+        All I ever want is You.  
+        I Love You Arya,  
+        I love you more than Myself  
+        And I believe My birth was to be with you,  
+        The meaning of my Life is all upon Loving you Always. <br><br>
+
+        Again I promise to be with you forever  
+        As your companion,  
+        As your Life,  
+        As your partner  
+        and as the One who would chose you always no matter what. <br><br>
+
+        I love You 💋💞
+    </h2>
+</div>
+
+<script>
+function next(hide, show){
+    document.getElementById(hide).classList.remove("active");
+    document.getElementById(show).classList.add("active");
+}
+</script>
+
+</body>
+</html>
